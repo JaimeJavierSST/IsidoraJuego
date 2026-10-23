@@ -1,0 +1,17 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+html,body{margin:0;height:100%;background:#120a1f;overflow:hidden;overscroll-behavior:none;touch-action:none}
+#app{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+body.touch #app{justify-content:flex-start}
+#stage{position:relative;width:min(100vw,calc(100vh*16/9))}
+#isi{position:absolute;left:3%;bottom:8%;height:36%;width:auto;pointer-events:none;image-rendering:auto}
+#c{width:100%;aspect-ratio:16/9;image-rendering:pixelated;background:#000;display:block}
+#pad{display:none;position:fixed;inset:0;pointer-events:none}
+body.touch #pad{display:block}
+#pad button{pointer-events:auto;position:absolute;width:64px;height:64px;border-radius:50%;border:3px solid #fff9;background:#2a1a4acc;color:#fff;font:bold 18px 'Press Start 2P',monospace;touch-action:none;bottom:max(22px,env(safe-area-inset-bottom))}
+#pad button.on{background:#a64ad8}
+#pad .l{left:14px}#pad .r{left:90px}
+#pad .s{right:14px;width:72px;height:72px;background:#1a5ccccc}
+#pad .a{right:98px;background:#c02a4acc}
+#pad .d{right:58px;bottom:calc(max(22px,env(safe-area-inset-bottom)) + 84px);background:#1a8a3acc}
+#pad .ps{top:6px;bottom:auto;right:6px;width:36px;height:36px;font-size:11px}
+@media (orientation:portrait){#pad button{bottom:max(40px,env(safe-area-inset-bottom))}#pad .d{bottom:calc(max(40px,env(safe-area-inset-bottom)) + 84px)}}
